@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
       } else {
         clearInterval(interval);
       }
-    }, 400);
+    }, 120); // Accelerated from 400ms to 120ms for snappier feel
     
     return () => clearInterval(interval);
   }, []);
@@ -52,6 +52,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
         <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             className="relative w-full max-w-6xl text-center"
         >
             <div className="font-mono text-sm font-bold text-gray-500 mb-6 text-left md:text-center max-w-lg mx-auto min-h-[80px]">

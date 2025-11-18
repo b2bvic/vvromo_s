@@ -22,8 +22,12 @@ const Experience: React.FC = () => {
 
         <div className="grid grid-cols-1 gap-0 border-4 border-ink shadow-brutal-lg bg-surface">
           {EXPERIENCE_DATA.map((job, index) => (
-            <article 
+            <motion.article 
                 key={index} 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
                 className={`p-6 md:p-8 border-b-4 border-ink last:border-b-0 transition-colors hover:bg-subtle group relative`}
             >
                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
@@ -58,7 +62,7 @@ const Experience: React.FC = () => {
                <div className="absolute top-4 right-4 font-mono text-6xl font-black text-gray-100 dark:text-gray-800 pointer-events-none -z-10 group-hover:text-gray-200 dark:group-hover:text-gray-700 transition-colors">
                    0{index + 1}
                </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

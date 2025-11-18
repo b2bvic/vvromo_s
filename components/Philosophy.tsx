@@ -72,7 +72,7 @@ const Philosophy: React.FC = () => {
                     key={testimonial.id}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="bg-surface border-4 border-ink shadow-brutal p-6 relative group hover:bg-ink hover:text-inverse transition-colors"
                  >

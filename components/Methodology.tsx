@@ -49,7 +49,7 @@ const Methodology: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
                     className="flex flex-col h-full"
                  >
                     <div className={`relative bg-surface border-4 border-ink p-4 flex flex-col items-center text-center h-full shadow-brutal hover:shadow-none hover:translate-y-[4px] hover:translate-x-[4px] transition-all`}>

@@ -34,6 +34,14 @@ const App: React.FC = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-bg text-ink font-sans selection:bg-accent selection:text-white transition-colors duration-300">
       {/* Background Grid */}
@@ -55,19 +63,22 @@ const App: React.FC = () => {
           <div className="hidden md:flex items-center gap-6 text-sm font-bold font-mono uppercase tracking-tight">
             <a 
               href="#ecosystem" 
-              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none"
+              onClick={(e) => handleNavClick(e, 'ecosystem')}
+              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none cursor-pointer"
             >
               Ecosystem
             </a>
             <a 
               href="#methodology" 
-              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none"
+              onClick={(e) => handleNavClick(e, 'methodology')}
+              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none cursor-pointer"
             >
               The Flywheel
             </a>
             <a 
               href="#timeline" 
-              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none"
+              onClick={(e) => handleNavClick(e, 'timeline')}
+              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none cursor-pointer"
             >
               History
             </a>

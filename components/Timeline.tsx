@@ -25,8 +25,8 @@ const Timeline: React.FC = () => {
               key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
               className="relative pl-0 md:pl-12"
             >
               {/* Connector for Desktop */}
