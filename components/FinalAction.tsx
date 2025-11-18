@@ -1,11 +1,9 @@
-
-
 import React from 'react';
 import { ArrowRight, Zap, FileText, BarChart } from 'lucide-react';
 
 const FinalAction: React.FC = () => {
   return (
-    <section className="relative z-20 border-t-4 border-ink">
+    <section className="relative z-20 border-t-4 border-ink transition-colors duration-300">
       <div className="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
         
         {/* Channel A: STRUCTURE (Blue) */}

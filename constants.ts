@@ -114,38 +114,21 @@ export const PRINCIPLES: Principle[] = [
 
 export const VENTURES: ExtendedVenture[] = [
   {
-    id: 'founder-os',
-    name: "Founder's AI OS",
-    role: "Consulting & Implementation",
-    description: "The apex of the value ladder. High-ticket implementation of Hybrid Intelligence Architecture (HIA) and Agentic Workflows for Enterprise.",
-    color: "brand-blue",
-    link: "https://scalewithsearch.com/consulting",
-    cta: "Apply For Access",
-    level: "Level 3",
+    id: 'focus',
+    name: "The Focus Engine",
+    role: "Browser OS",
+    description: "The free entry point. An operating system for your digital life designed to reduce cognitive load and prepare you for high-throughput systems work.",
+    color: "browser-os",
+    link: "#",
+    cta: "Get It Free",
+    level: "Level 0",
     features: [
-      "Hybrid Intelligence Architecture",
-      "Local LLM Inference Clusters",
-      "Proprietary RAG Systems",
-      "Zero Trust AI Security"
+      "Workona Organization Protocols",
+      "Contextualization Frameworks",
+      "Separation of Concerns",
+      "Focus State Design"
     ],
-    audience: ["Scaling Sarah (SaaS)", "Technical Tim (CTO)", "Enterprise Leaders"]
-  },
-  {
-    id: 'cohort',
-    name: "Strategic SEO Cohort",
-    role: "Executive Education",
-    description: "Maven-based cohort: 'Strategic SEO in the AI Era'. Positioning SEO as a strategic asset and intellectual discipline for the C-Suite.",
-    color: "suit",
-    link: "https://maven.com/course/strategy",
-    cta: "Join Waitlist",
-    level: "Level 2",
-    features: [
-      "From Answer Engines to Moats",
-      "Executive Audit Frameworks",
-      "Cognitive Search Physics",
-      "Strategic Deep Dives"
-    ],
-    audience: ["CMOs", "VPs of Marketing", "Strategic Steve"]
+    audience: ["Deep Work Practitioners", "High-Performance Operators"]
   },
   {
     id: 'collective',
@@ -162,24 +145,41 @@ export const VENTURES: ExtendedVenture[] = [
       "Local LLM Ops (LLO)",
       "Builder's Lounge (Discord)"
     ],
-    audience: ["Builders", "Agency Owners", "Practitioners"]
+    audience: ["The Builders", "Agency Founders", "Systems Architects"]
   },
   {
-    id: 'focus',
-    name: "The Focus Engine",
-    role: "Browser OS",
-    description: "The free entry point. An operating system for your digital life designed to reduce cognitive load and prepare you for high-throughput systems work.",
-    color: "browser-os",
-    link: "#",
-    cta: "Get It Free",
-    level: "Level 0",
+    id: 'cohort',
+    name: "Strategic SEO Cohort",
+    role: "Executive Education",
+    description: "Maven-based cohort: 'Strategic SEO in the AI Era'. Positioning SEO as a strategic asset and intellectual discipline for the C-Suite.",
+    color: "suit",
+    link: "https://maven.com/course/strategy",
+    cta: "Join Waitlist",
+    level: "Level 2",
     features: [
-      "Workona Organization Protocols",
-      "Contextualization Frameworks",
-      "Separation of Concerns",
-      "Focus State Design"
+      "From Answer Engines to Moats",
+      "Executive Audit Frameworks",
+      "Cognitive Search Physics",
+      "Strategic Deep Dives"
     ],
-    audience: ["Knowledge Workers", "Digital Natives", "Everyone"]
+    audience: ["The Strategists", "Marketing Executives", "Decision Makers"]
+  },
+  {
+    id: 'founder-os',
+    name: "Enterprise Intelligence",
+    role: "Consulting & Implementation",
+    description: "The apex. High-ticket implementation of Hybrid Intelligence Architecture (HIA) and Agentic Workflows for Enterprise Organizations.",
+    color: "brand-blue",
+    link: "https://scalewithsearch.com/consulting",
+    cta: "Apply For Access",
+    level: "Level 3",
+    features: [
+      "Hybrid Intelligence Architecture",
+      "Local LLM Inference Clusters",
+      "Proprietary RAG Systems",
+      "Zero Trust AI Security"
+    ],
+    audience: ["The Sovereigns", "Market Leaders", "Enterprise Orgs"]
   }
 ];
 

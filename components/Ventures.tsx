@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { VENTURES } from '../constants';
 import { ExternalLink, Box, ArrowUpRight, Disc, Lock, LayoutTemplate, FileText, Users, Archive, Laptop } from 'lucide-react';
@@ -16,7 +14,7 @@ const Ventures: React.FC = () => {
   }
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-surface scroll-mt-24" id="ecosystem">
+    <section className="py-24 px-4 md:px-8 bg-surface scroll-mt-24 transition-colors duration-300" id="ecosystem">
       <div className="max-w-7xl mx-auto">
          {/* Header */}
          <header className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-4 border-ink pb-6">
@@ -34,8 +32,8 @@ const Ventures: React.FC = () => {
                 <div className="p-4 bg-brand-blue text-white border-4 border-ink font-mono text-xs font-bold uppercase shadow-brutal rotate-2">
                     Full Stack
                 </div>
-                <div className="p-4 bg-gray-100 border-4 border-ink -rotate-1">
-                    <Disc size={48} strokeWidth={2} className="animate-spin-slow" />
+                <div className="p-4 bg-subtle border-4 border-ink -rotate-1">
+                    <Disc size={48} strokeWidth={2} className="text-ink animate-spin-slow" />
                 </div>
             </div>
          </header>
@@ -53,11 +51,11 @@ const Ventures: React.FC = () => {
                      venture.color === 'accent' ? 'bg-accent' : 'bg-ink'
                  }`}></div>
                  
-                 <div className="relative flex-1 bg-white border-4 border-ink p-6 md:p-10 flex flex-col transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
+                 <div className="relative flex-1 bg-surface border-4 border-ink p-6 md:p-10 flex flex-col transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
                     
                     {/* Coming Soon Badge */}
                     {venture.isComingSoon && (
-                        <div className="absolute top-0 right-0 bg-ink text-white px-3 py-1 font-mono text-xs font-bold uppercase border-l-4 border-b-4 border-ink z-20 shadow-sm">
+                        <div className="absolute top-0 right-0 bg-ink text-inverse px-3 py-1 font-mono text-xs font-bold uppercase border-l-4 border-b-4 border-ink z-20 shadow-sm">
                             WAITLIST_OPEN
                         </div>
                     )}
@@ -76,7 +74,7 @@ const Ventures: React.FC = () => {
                                     {venture.role}
                                  </div>
                                  {venture.level && (
-                                    <div className="inline-block px-3 py-1 bg-gray-200 text-ink font-mono text-xs font-bold uppercase border-2 border-ink">
+                                    <div className="inline-block px-3 py-1 bg-subtle text-ink font-mono text-xs font-bold uppercase border-2 border-ink">
                                         {venture.level}
                                     </div>
                                  )}
@@ -85,7 +83,7 @@ const Ventures: React.FC = () => {
                                 {venture.name}
                              </h3>
                         </div>
-                        <div className="hidden md:block opacity-100">
+                        <div className="hidden md:block opacity-100 text-ink">
                             {getIcon(venture.id)}
                         </div>
                     </div>
@@ -95,14 +93,18 @@ const Ventures: React.FC = () => {
                         {venture.description}
                     </p>
 
-                    {/* Audience Tags */}
+                    {/* Identity Tags (Implicit Audience) */}
                     <div className="mb-8">
-                        <div className="flex items-center gap-2 mb-3 font-mono text-xs font-bold uppercase text-gray-500">
-                            <Users size={14} /> Target Audience
-                        </div>
                         <div className="flex flex-wrap gap-2">
                             {venture.audience.map((aud, i) => (
-                                <span key={i} className="px-2 py-1 bg-gray-100 border-2 border-ink text-xs font-bold uppercase">
+                                <span key={i} className="px-3 py-1.5 bg-subtle border-2 border-ink text-xs font-bold uppercase flex items-center gap-2 text-ink">
+                                    <span className={`w-1.5 h-1.5 rounded-full ${
+                                     venture.color === 'brand-blue' ? 'bg-brand-blue' : 
+                                     venture.color === 'suit' ? 'bg-suit' : 
+                                     venture.color === 'found' ? 'bg-found' :
+                                     venture.color === 'browser-os' ? 'bg-browser-os' :
+                                     venture.color === 'accent' ? 'bg-accent' : 'bg-ink'
+                                    }`}></span>
                                     {aud}
                                 </span>
                             ))}
@@ -110,8 +112,8 @@ const Ventures: React.FC = () => {
                     </div>
 
                     {/* Features / Content Pillars */}
-                    <div className="bg-gray-50 border-2 border-ink p-4 mb-8 flex-grow">
-                        <div className="font-mono text-xs font-bold uppercase text-gray-500 mb-3 border-b-2 border-gray-200 pb-2">
+                    <div className="bg-subtle border-2 border-ink p-4 mb-8 flex-grow">
+                        <div className="font-mono text-xs font-bold uppercase text-gray-500 mb-3 border-b-2 border-ink/20 pb-2">
                             Core Modules
                         </div>
                         <ul className="space-y-3">

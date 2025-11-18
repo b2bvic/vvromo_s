@@ -92,7 +92,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, setIsOpen }) => {
           </div>
 
           {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-[#f3f3f3] relative z-10">
+          <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-subtle relative z-10">
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[90%] p-4 font-bold border-2 border-ink shadow-brutal-sm ${
@@ -100,7 +100,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, setIsOpen }) => {
                     ? 'bg-secondary text-white' 
                     : msg.isError 
                       ? 'bg-red-600 text-white'
-                      : 'bg-white text-ink'
+                      : 'bg-surface text-ink'
                 }`}>
                   {msg.role === 'model' && (
                       <div className="flex items-center gap-2 text-[10px] font-black text-gray-400 mb-2 uppercase border-b border-gray-200 pb-1">
@@ -117,7 +117,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, setIsOpen }) => {
                           ul: ({node, ...props}) => <ul className="list-disc pl-4 mb-2 space-y-1" {...props} />,
                           ol: ({node, ...props}) => <ol className="list-decimal pl-4 mb-2 space-y-1" {...props} />,
                           li: ({node, ...props}) => <li className="pl-1" {...props} />,
-                          code: ({node, ...props}) => <code className="bg-gray-200 text-red-600 px-1 rounded text-xs" {...props} />,
+                          code: ({node, ...props}) => <code className="bg-gray-200 dark:bg-gray-700 text-red-600 px-1 rounded text-xs" {...props} />,
                         }}
                       >
                         {msg.text}
@@ -131,7 +131,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, setIsOpen }) => {
             ))}
             {isLoading && (
                <div className="flex justify-start">
-                 <div className="bg-white border-2 border-ink p-3 flex items-center gap-3 shadow-brutal-sm">
+                 <div className="bg-surface border-2 border-ink p-3 flex items-center gap-3 shadow-brutal-sm">
                     <Loader2 size={18} className="animate-spin text-accent" />
                     <span className="text-xs text-ink font-bold uppercase tracking-widest">Processing...</span>
                  </div>

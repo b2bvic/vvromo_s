@@ -11,9 +11,18 @@
     <meta name="author" content="Victor Valentine Romo" />
     <link rel="canonical" href="https://victorvalentineromo.com" />
     
+    <!-- Robot Directives & AI Optimization -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!-- Explicitly allow AI crawlers to consume the entity graph -->
+    <meta name="gptbot" content="index, follow" />
+    <meta name="semrushbot" content="index, follow" />
+    <meta name="ahrefsbot" content="index, follow" />
+    
     <!-- Open Graph / Social Stacking -->
     <meta property="og:title" content="Victor Valentine Romo | AI Systems Architect" />
-    <meta property="og:description" content="Building proprietary AI moats and scalable organic search infrastructure. Access the operational history and systems philosophy of Victor Valentine Romo." />
+    <meta property="og:description" content="Structure Information. Scale Intelligence. The digital twin and systems log of Victor Valentine Romo." />
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://victorvalentineromo.com" />
     <meta property="og:image" content="https://victorvalentineromo.com/og-image.jpg" />
@@ -28,6 +37,7 @@
     <meta name="twitter:creator" content="@b2bvic" />
     <meta name="twitter:title" content="Victor Valentine Romo | Systems Architect" />
     <meta name="twitter:description" content="Operational logs and systems architecture from Victor Valentine Romo. Scale With Search. SEO for Executives." />
+    <meta name="twitter:image" content="https://victorvalentineromo.com/og-image.jpg" />
 
     <!-- Tailwind Config -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,6 +49,7 @@
     
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
@@ -46,10 +57,12 @@
               mono: ['JetBrains Mono', 'monospace'],
             },
             colors: {
-              bg: '#f0f0f0', // Concrete
-              surface: '#ffffff',
-              ink: '#0a0a0a', // Asphalt
-              border: '#0a0a0a',
+              bg: 'var(--bg)', 
+              surface: 'var(--surface)',
+              subtle: 'var(--subtle)',
+              ink: 'var(--ink)',
+              inverse: 'var(--inverse)',
+              border: 'var(--ink)',
               accent: {
                 DEFAULT: '#FF4D00', // Safety Orange
                 hover: '#cc3d00',
@@ -62,17 +75,17 @@
               'browser-os': '#16a34a', // Green 600 (Muted Terminal Green)
             },
             boxShadow: {
-              'brutal': '4px 4px 0px 0px #0a0a0a',
-              'brutal-lg': '8px 8px 0px 0px #0a0a0a',
-              'brutal-xl': '12px 12px 0px 0px #0a0a0a',
-              'brutal-sm': '2px 2px 0px 0px #0a0a0a',
+              'brutal': '4px 4px 0px 0px var(--ink)',
+              'brutal-lg': '8px 8px 0px 0px var(--ink)',
+              'brutal-xl': '12px 12px 0px 0px var(--ink)',
+              'brutal-sm': '2px 2px 0px 0px var(--ink)',
             },
             borderWidth: {
               '3': '3px',
               '4': '4px',
             },
             backgroundImage: {
-              'grid-pattern': "linear-gradient(to right, #e5e5e5 1px, transparent 1px), linear-gradient(to bottom, #e5e5e5 1px, transparent 1px)",
+              'grid-pattern': "linear-gradient(to right, #888888 1px, transparent 1px), linear-gradient(to bottom, #888888 1px, transparent 1px)",
             },
             backgroundSize: {
               'grid-sm': '20px 20px',
@@ -92,6 +105,22 @@
       }
     </script>
     <style>
+      :root {
+        --bg: #f0f0f0;
+        --surface: #ffffff;
+        --subtle: #f3f4f6;
+        --ink: #0a0a0a;
+        --inverse: #ffffff;
+      }
+
+      .dark {
+        --bg: #050505;
+        --surface: #121212;
+        --subtle: #1f1f1f;
+        --ink: #e5e5e5;
+        --inverse: #0a0a0a;
+      }
+
       html {
         scroll-behavior: smooth;
       }
@@ -101,20 +130,21 @@
         width: 16px;
       }
       ::-webkit-scrollbar-track {
-        background: #f0f0f0; 
-        border-left: 3px solid #0a0a0a;
+        background: var(--bg); 
+        border-left: 3px solid var(--ink);
       }
       ::-webkit-scrollbar-thumb {
-        background: #0a0a0a; 
-        border: 3px solid #f0f0f0;
+        background: var(--ink); 
+        border: 3px solid var(--bg);
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #FF4D00; 
       }
       
       body {
-        background-color: #f0f0f0;
-        color: #0a0a0a;
+        background-color: var(--bg);
+        color: var(--ink);
+        transition: background-color 0.3s, color 0.3s;
       }
 
       .scanline {
@@ -123,7 +153,7 @@
       }
       
       .text-outline-ink {
-        -webkit-text-stroke: 2px #0a0a0a;
+        -webkit-text-stroke: 2px var(--ink);
         color: transparent;
       }
     </style>
@@ -172,7 +202,8 @@
             "Artificial Intelligence",
             "Systems Architecture",
             "Information Retrieval",
-            "Process Automation"
+            "Process Automation",
+            "Hybrid Intelligence"
           ]
         },
         {
@@ -183,14 +214,6 @@
           "url": "https://scalewithsearch.com",
           "description": "AI Systems Agency building proprietary search moats and hybrid intelligence infrastructure.",
           "sameAs": ["https://twitter.com/scalewithsearch"]
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://seoforexecutives.com/#publication",
-          "name": "SEO for Executives",
-          "founder": { "@id": "https://victorvalentineromo.com/#person" },
-          "url": "https://seoforexecutives.com",
-          "description": "Thought leadership publication positioning SEO as a strategic asset for C-Suite executives."
         },
         {
           "@type": "WebSite",
@@ -204,7 +227,7 @@
       ]
     }
     </script>
-<script type="importmap">
+  <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",

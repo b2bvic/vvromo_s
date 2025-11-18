@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { PRINCIPLES, TESTIMONIALS } from '../constants';
 import { motion } from 'framer-motion';
@@ -7,7 +5,7 @@ import { Cpu, Terminal, FileCode, MessageSquare, AlertCircle } from 'lucide-reac
 
 const Philosophy: React.FC = () => {
   return (
-    <section className="py-24 px-4 md:px-12 bg-bg border-b-4 border-ink relative overflow-hidden scroll-mt-24" id="philosophy">
+    <section className="py-24 px-4 md:px-12 bg-bg border-b-4 border-ink relative overflow-hidden scroll-mt-24 transition-colors duration-300" id="philosophy">
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid-pattern bg-grid-sm opacity-40 pointer-events-none"></div>
 
@@ -76,11 +74,11 @@ const Philosophy: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-surface border-4 border-ink shadow-brutal p-6 relative group hover:bg-ink hover:text-white transition-colors"
+                    className="bg-surface border-4 border-ink shadow-brutal p-6 relative group hover:bg-ink hover:text-inverse transition-colors"
                  >
                     {/* Terminal Header Style */}
                     <div className="flex justify-between items-center mb-4 border-b-2 border-gray-200 group-hover:border-gray-700 pb-2 font-mono text-xs uppercase tracking-wider">
-                        <span className="flex items-center gap-2">
+                        <span className="flex items-center gap-2 text-ink group-hover:text-inverse">
                             <AlertCircle size={14} className="text-accent" /> 
                             {testimonial.context}
                         </span>
@@ -89,16 +87,16 @@ const Philosophy: React.FC = () => {
 
                     <div className="relative">
                         <MessageSquare size={40} className="absolute -top-2 -left-2 opacity-5 text-gray-400 group-hover:text-white group-hover:opacity-10" />
-                        <p className="font-mono text-sm md:text-base font-bold leading-relaxed relative z-10 mb-4">
+                        <p className="font-mono text-sm md:text-base font-bold leading-relaxed relative z-10 mb-4 text-ink group-hover:text-inverse">
                             "{testimonial.quote}"
                         </p>
                         
                         <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-gray-200 border-2 border-ink group-hover:border-white group-hover:bg-gray-800 flex items-center justify-center font-black text-sm">
+                            <div className="w-8 h-8 bg-subtle border-2 border-ink group-hover:border-inverse group-hover:bg-gray-800 flex items-center justify-center font-black text-sm text-ink group-hover:text-white">
                                 {testimonial.author.charAt(0)}
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-bold text-sm uppercase">{testimonial.author}</span>
+                                <span className="font-bold text-sm uppercase text-ink group-hover:text-inverse">{testimonial.author}</span>
                                 <span className="text-xs font-mono text-gray-500 group-hover:text-gray-400">{testimonial.role}</span>
                             </div>
                         </div>
@@ -112,7 +110,7 @@ const Philosophy: React.FC = () => {
              ))}
              
              {/* Final System Status Block */}
-             <div className="bg-ink text-white p-4 border-4 border-ink shadow-brutal mt-8 font-mono text-xs">
+             <div className="bg-ink text-inverse p-4 border-4 border-ink shadow-brutal mt-8 font-mono text-xs">
                 <p className="mb-1"><span className="text-green-400">root@romo_s:~$</span> tail -f /var/log/reputation</p>
                 <p className="text-gray-400">Monitoring incoming signals...</p>
                 <div className="mt-2 w-3 h-5 bg-green-400 animate-pulse"></div>
