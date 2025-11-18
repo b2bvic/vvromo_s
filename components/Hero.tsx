@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
       } else {
         clearInterval(interval);
       }
-    }, 120); // Accelerated from 400ms to 120ms for snappier feel
+    }, 400); // Reverted to 400ms for deliberate retro feel
     
     return () => clearInterval(interval);
   }, []);
