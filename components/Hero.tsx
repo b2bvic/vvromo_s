@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-interface HeroProps {
-  onOpenChat: () => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
+const Hero: React.FC = () => {
   const [bootText, setBootText] = useState<string[]>([]);
   
   useEffect(() => {
@@ -55,7 +51,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="relative w-full max-w-6xl text-center"
         >
-            <div className="font-mono text-sm font-bold text-gray-500 mb-6 text-left md:text-center max-w-lg mx-auto min-h-[80px]">
+            {/* Boot Sequence Container - Fixed Height to prevent H1 shift */}
+            <div className="font-mono text-sm font-bold text-gray-500 mb-6 text-left md:text-center max-w-lg mx-auto h-[110px] flex flex-col justify-end">
                {bootText.map((txt, i) => (
                  <div key={i} className="text-xs md:text-sm leading-tight text-ink opacity-70">
                    {`> ${txt}`}
@@ -99,14 +96,6 @@ const Hero: React.FC<HeroProps> = ({ onOpenChat }) => {
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 w-full">
-              <button 
-                onClick={onOpenChat}
-                className="group relative w-full md:w-auto px-8 py-5 bg-ink border-4 border-ink text-inverse font-black text-xl shadow-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3 uppercase overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center gap-2">
-                    <Terminal size={24} strokeWidth={3} className="text-accent" /> INITIALIZE_CHAT
-                </span>
-              </button>
               <a href="https://scalewithsearch.com/consulting" target="_blank" rel="noreferrer" className="group w-full md:w-auto px-8 py-5 bg-surface border-4 border-ink text-ink font-black text-xl shadow-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3 uppercase">
                 HIRE_THE_ARCHITECT <ArrowRight size={24} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
               </a>

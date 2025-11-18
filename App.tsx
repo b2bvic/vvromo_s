@@ -3,14 +3,13 @@ import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Philosophy from './components/Philosophy';
 import Ventures from './components/Ventures';
-import ChatInterface from './components/ChatInterface';
+// ChatInterface preserved in codebase but removed from runtime view
+// import ChatInterface from './components/ChatInterface'; 
 import FinalAction from './components/FinalAction';
 import Methodology from './components/Methodology';
 import { Linkedin, Twitter, Cpu, Moon, Sun } from 'lucide-react';
 
 const App: React.FC = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  
   // Theme State Management
   const [theme, setTheme] = useState<string>(() => {
     if (typeof window !== 'undefined') {
@@ -104,7 +103,7 @@ const App: React.FC = () => {
 
       {/* Main Content - Container */}
       <main className="relative z-10 border-x-0 md:border-x-4 border-ink max-w-7xl mx-auto bg-surface shadow-brutal-xl my-0 md:my-12 transition-colors duration-300">
-        <Hero onOpenChat={() => setIsChatOpen(true)} />
+        <Hero />
         
         {/* Divider Tape */}
         <div className="w-full h-12 bg-ink flex items-center overflow-hidden select-none">
@@ -156,9 +155,6 @@ const App: React.FC = () => {
             </div>
         </div>
       </footer>
-
-      {/* Gemini Chat Interface */}
-      <ChatInterface isOpen={isChatOpen} setIsOpen={setIsChatOpen} />
     </div>
   );
 };
