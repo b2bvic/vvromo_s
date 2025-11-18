@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import Hero from './components/Hero';
 import Timeline from './components/Timeline';
@@ -6,6 +7,7 @@ import Philosophy from './components/Philosophy';
 import Ventures from './components/Ventures';
 import ChatInterface from './components/ChatInterface';
 import FinalAction from './components/FinalAction';
+import Methodology from './components/Methodology';
 import { Linkedin, Twitter, Cpu } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -25,28 +27,28 @@ const App: React.FC = () => {
             </div>
             <div className="flex flex-col leading-none">
               <span className="font-black text-xl tracking-tighter uppercase italic">ROMO_S</span>
-              <span className="font-mono text-[10px] font-bold bg-ink text-white px-1 inline-block self-start">SYS.V2.0</span>
+              <span className="font-mono text-[10px] font-bold bg-ink text-white px-1 inline-block self-start">SYS.V2.5</span>
             </div>
           </div>
           
           <div className="hidden md:flex items-center gap-6 text-sm font-bold font-mono uppercase tracking-tight">
             <a 
-              href="#ventures" 
+              href="#ecosystem" 
               className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none"
             >
-              Ventures
+              Ecosystem
+            </a>
+            <a 
+              href="#methodology" 
+              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none"
+            >
+              The Flywheel
             </a>
             <a 
               href="#timeline" 
               className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none"
             >
-              Operational History
-            </a>
-            <a 
-              href="#philosophy" 
-              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none"
-            >
-              Protocols
+              History
             </a>
           </div>
 
@@ -68,12 +70,14 @@ const App: React.FC = () => {
         {/* Divider Tape */}
         <div className="w-full h-12 bg-ink flex items-center overflow-hidden select-none">
            <div className="whitespace-nowrap font-mono text-highlight font-bold uppercase text-sm animate-marquee">
-              /// SYSTEM OPTIMIZED /// SCALABLE ARCHITECTURE /// INLAND EMPIRE ROOTS /// RALEIGH BASE /// 
-              /// SYSTEM OPTIMIZED /// SCALABLE ARCHITECTURE /// INLAND EMPIRE ROOTS /// RALEIGH BASE /// 
+              /// STRUCTURE INFORMATION /// SCALE INTELLIGENCE /// APPLIED INFORMATION SYSTEMS /// HYBRID INTELLIGENCE ARCHITECTURE /// 
+              /// STRUCTURE INFORMATION /// SCALE INTELLIGENCE /// APPLIED INFORMATION SYSTEMS /// HYBRID INTELLIGENCE ARCHITECTURE /// 
            </div>
         </div>
         
         <Ventures />
+
+        <Methodology />
 
         <div className="w-full h-4 bg-accent border-y-4 border-ink bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
 
@@ -91,7 +95,7 @@ const App: React.FC = () => {
       <footer className="py-16 border-t-4 border-ink bg-ink text-surface text-center relative z-10" id="contact">
         <div className="max-w-7xl mx-auto px-4">
             <div className="inline-block border-2 border-surface p-4 mb-8 rotate-1 hover:rotate-0 transition-transform bg-suit text-white shadow-[4px_4px_0px_0px_#ffffff]">
-                <p className="font-black uppercase text-2xl italic">"To perfect progress."</p>
+                <p className="font-black uppercase text-2xl italic">"Structure is Strategy."</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 font-mono text-xs text-left border-t border-gray-800 pt-8">
@@ -108,7 +112,7 @@ const App: React.FC = () => {
                 <div>
                     <h4 className="font-bold text-accent mb-2 uppercase">Legal</h4>
                     <p>&copy; {new Date().getFullYear()} V.V.R.</p>
-                    <p>Systems Architect</p>
+                    <p>Information Architect</p>
                 </div>
             </div>
         </div>

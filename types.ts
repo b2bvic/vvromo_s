@@ -39,3 +39,13 @@ export interface ExperienceItem {
   location: string;
   points: string[];
 }
+
+export interface ExtendedVenture extends Venture {
+  id: string;
+  color: string;
+  cta: string;
+  features: string[];
+  audience: string[];
+  level?: string;
+  isComingSoon?: boolean;
+}

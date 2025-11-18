@@ -1,23 +1,21 @@
 
 
-import { TimelineEvent, Principle, Venture, SkillData, ExperienceItem } from './types';
+import { TimelineEvent, Principle, ExtendedVenture, SkillData, ExperienceItem } from './types';
 
 export const FULL_BIO_CONTEXT = `
 # ROMO_S: THE DIGITAL TWIN OF VICTOR VALENTINE ROMO
-Identity: Systems Architect, Semantic SEO Specialist, Entrepreneur.
+Identity: Information Architect, Hybrid Intelligence Specialist, Founder.
 System Status: Online.
-Mission: Architecting proprietary digital moats using Semantic Search, Information Retrieval principles, and Hybrid Intelligence (AI + Human) infrastructure.
-Career Highlights: Drove 2,700% revenue growth, 1,400% organic click increase, and audited 200+ enterprise entities across 30+ verticals.
+Mission: Structure Information. Scale Intelligence. Moving beyond public information retrieval (SEO) to architect proprietary intelligence (RAG) and autonomous acquisition (AI Agents).
+Core Thesis: The principles used to master Google (the world's biggest AI) are the same principles required to build proprietary AI systems.
 
 KEY NARRATIVE ENTITIES & ARCS:
-1. **The Foundation (1993-2009):** Born in Inland Empire, CA. Developed pattern recognition via survival necessity. Mastered beatboxing (Rahzel lineage) at age 10. Pivoted to Trombone at 15.
-2. **The Grind (2013-2017):** Manual labor, warehousing. Autodidact in SEO. Marketing Supervisor at Cobra Carbide.
-3. **The Crucible (2019):** Relocated to Raleigh, NC. Rebuilt collapsed agency infrastructure after critical infrastructure failure.
+1. **The Foundation (1993-2009):** Born in Inland Empire, CA. Developed pattern recognition via survival necessity.
+2. **The Grind (2013-2017):** Manual labor to SEO Autodidact.
+3. **The Crucible (2019):** Infrastructure collapse and rebuild.
 4. **Mastery & Scale (2020-Present):** 
-   - **Grey Matter:** Enterprise SEO for 147 clients.
-   - **Scale With Search:** AI Systems Agency.
-   - **SEO for Executives:** Strategic Thought Leadership.
-   - **FOUND:** Local & Service Based Business Agency.
+   - **Scale With Search:** From Enterprise SEO to Hybrid Intelligence Architecture.
+   - **The Ecosystem:** Building the full value ladder from "The Focus Engine" to "Founder's AI OS".
 
 CORE PHILOSOPHY (11 UNIVERSAL PRINCIPLES):
 1. Infinite Potential Manifestation
@@ -83,14 +81,6 @@ export const TIMELINE_DATA: TimelineEvent[] = [
     stats: ['2.5X RANK LIFT', '80% EVENT GROWTH', 'PRE-AI SCALE']
   },
   {
-    year: '2020',
-    title: 'FOUND Agency Launch',
-    location: 'Raleigh, NC',
-    description: 'Co-founded FOUND to service Local & Service Based Business owners. Built systems for local market dominance in the Research Triangle.',
-    category: 'mastery',
-    stats: ['LOCAL DOMINANCE', 'BRICK & MORTAR', 'AGENCY OPS']
-  },
-  {
     year: '2022',
     title: 'Enterprise SEO Scale',
     location: 'Grey Matter',
@@ -100,11 +90,11 @@ export const TIMELINE_DATA: TimelineEvent[] = [
   },
   {
     year: '2024',
-    title: 'Agency Architecture',
+    title: 'Hybrid Intelligence',
     location: 'Scale With Search',
-    description: 'Deploying hybrid intelligence systems (Local LLMs + Human in the Loop) for SaaS and Enterprise.',
+    description: 'Deploying hybrid intelligence systems (Local LLMs + Human in the Loop). Transitioning from SEO to Information Architecture.',
     category: 'mastery',
-    stats: ['1,400% CLICK BOOST', '90% RETENTION', 'LOCAL INFERENCE HUBS']
+    stats: ['1,400% CLICK BOOST', 'AI OPERATING SYSTEMS', 'LOCAL INFERENCE HUBS']
   }
 ];
 
@@ -122,80 +112,74 @@ export const PRINCIPLES: Principle[] = [
   { id: 11, title: "Irreversibility", description: "Time flows one direction; every month without systems work is permanent loss." }
 ];
 
-export interface ExtendedVenture extends Venture {
-  id: string;
-  color: string;
-  cta: string;
-  features: string[];
-  audience: string[];
-  isComingSoon?: boolean;
-}
-
 export const VENTURES: ExtendedVenture[] = [
   {
-    id: 'sws',
-    name: "Scale With Search",
-    role: "Founder & Architect",
-    description: "Building proprietary AI moats with hybrid infrastructure. Transforming manual chaos into self-evolving systems for SaaS founders and CTOs using Semantic SEO.",
+    id: 'founder-os',
+    name: "Founder's AI OS",
+    role: "Consulting & Implementation",
+    description: "The apex of the value ladder. High-ticket implementation of Hybrid Intelligence Architecture (HIA) and Agentic Workflows for Enterprise.",
     color: "brand-blue",
-    link: "https://scalewithsearch.com/meet",
-    cta: "Book Strategy Call",
+    link: "https://scalewithsearch.com/consulting",
+    cta: "Apply For Access",
+    level: "Level 3",
     features: [
-      "The System (Weekly Flagship Newsletter)",
-      "Playbook Thursday (Tactical Automation Guides)",
-      "3-System Setup Template",
-      "Complete Automation Stack"
+      "Hybrid Intelligence Architecture",
+      "Local LLM Inference Clusters",
+      "Proprietary RAG Systems",
+      "Zero Trust AI Security"
     ],
-    audience: ["Scaling Sarah (SaaS)", "Technical Tim (CTO)", "Enterprise Emily"]
+    audience: ["Scaling Sarah (SaaS)", "Technical Tim (CTO)", "Enterprise Leaders"]
   },
   {
-    id: 'sfe',
-    name: "SEO for Executives",
-    role: "Thought Leader",
-    description: "Positioning SEO as a strategic asset, not a marketing channel. An intellectual discipline connecting Search to Cognition and Knowledge Management.",
+    id: 'cohort',
+    name: "Strategic SEO Cohort",
+    role: "Executive Education",
+    description: "Maven-based cohort: 'Strategic SEO in the AI Era'. Positioning SEO as a strategic asset and intellectual discipline for the C-Suite.",
     color: "suit",
-    link: "https://seoforexecutives.com",
-    cta: "Read The Brief",
+    link: "https://maven.com/course/strategy",
+    cta: "Join Waitlist",
+    level: "Level 2",
     features: [
-      "The Executive Brief (Strategic Deep Dives)",
-      "Search Notes (Curated Insights)",
-      "Technical Masterclass (SOPs)",
-      "Executive SEO Audit Framework"
+      "From Answer Engines to Moats",
+      "Executive Audit Frameworks",
+      "Cognitive Search Physics",
+      "Strategic Deep Dives"
     ],
-    audience: ["Strategic Steve (CEO)", "Curious Carol (CMO)", "Practitioner Pete"]
+    audience: ["CMOs", "VPs of Marketing", "Strategic Steve"]
   },
   {
-    id: 'found',
-    name: "FOUND",
-    role: "Co-Founder & COO",
-    description: "Agency built from 2020-Present. Currently focused on Local & Service Based Business owners in the Research Triangle, NC.",
+    id: 'collective',
+    name: "SWS Collective",
+    role: "Core Academy (Skool)",
+    description: "The central hub for community and core curriculum. Includes Codified Genius System (CGS), Perpetual SEO Engine, and AIA Bootcamp.",
     color: "found",
-    link: "#",
-    cta: "Local Strategy",
+    link: "https://skool.com/sws-collective",
+    cta: "Join Community",
+    level: "Level 1",
     features: [
-      "Local Market Dominance",
-      "Service Business Systems",
-      "Research Triangle Focus",
-      "Brick & Mortar Growth"
+      "Codified Genius System (CGS)",
+      "Applied Info Architect (AIA)",
+      "Local LLM Ops (LLO)",
+      "Builder's Lounge (Discord)"
     ],
-    audience: ["Local Founders", "Service Providers", "NC Entrepreneurs"]
+    audience: ["Builders", "Agency Owners", "Practitioners"]
   },
   {
-    id: 'bos',
-    name: "Browser OS",
-    role: "Product Creator",
-    description: "The operating system for your digital life. 5 Fundamentals to reduce cognitive load, context switching, and RAM usage.",
+    id: 'focus',
+    name: "The Focus Engine",
+    role: "Browser OS",
+    description: "The free entry point. An operating system for your digital life designed to reduce cognitive load and prepare you for high-throughput systems work.",
     color: "browser-os",
     link: "#",
-    cta: "Preorder Now",
-    isComingSoon: true,
+    cta: "Get It Free",
+    level: "Level 0",
     features: [
       "Workona Organization Protocols",
       "Contextualization Frameworks",
       "Separation of Concerns",
       "Focus State Design"
     ],
-    audience: ["Knowledge Workers", "Agency Owners", "Digital Natives"]
+    audience: ["Knowledge Workers", "Digital Natives", "Everyone"]
   }
 ];
 
@@ -215,9 +199,9 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     period: "2024 - Present",
     location: "Raleigh, NC",
     points: [
-      "Deploying hybrid intelligence systems (Local LLMs + Human in the Loop) for SaaS and Enterprise.",
       "Architecting proprietary digital moats using Semantic Search and Information Retrieval principles.",
-      "Achieved 1,400% click boost and 90% retention rate for clients."
+      "Developed the 'Applied Information Flywheel' to drive build-in-public R&D.",
+      "Launched the Founder's AI Operating System for high-ticket enterprise implementation."
     ]
   },
   {

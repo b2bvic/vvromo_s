@@ -1,38 +1,38 @@
 
 
 import React from 'react';
-import { VENTURES, ExtendedVenture } from '../constants';
+import { VENTURES } from '../constants';
 import { ExternalLink, Box, ArrowUpRight, Disc, Lock, LayoutTemplate, FileText, Users, Archive, Laptop } from 'lucide-react';
 
 const Ventures: React.FC = () => {
   const getIcon = (id: string) => {
       switch(id) {
-          case 'sws': return <LayoutTemplate size={40} strokeWidth={2} />;
-          case 'sfe': return <FileText size={40} strokeWidth={2} />;
-          case 'found': return <Archive size={40} strokeWidth={2} />;
-          case 'bos': return <Laptop size={40} strokeWidth={2} />;
+          case 'founder-os': return <LayoutTemplate size={40} strokeWidth={2} />;
+          case 'cohort': return <FileText size={40} strokeWidth={2} />;
+          case 'collective': return <Users size={40} strokeWidth={2} />;
+          case 'focus': return <Laptop size={40} strokeWidth={2} />;
           default: return <Box size={40} strokeWidth={2} />;
       }
   }
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-surface scroll-mt-24" id="ventures">
+    <section className="py-24 px-4 md:px-8 bg-surface scroll-mt-24" id="ecosystem">
       <div className="max-w-7xl mx-auto">
          {/* Header */}
          <header className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-4 border-ink pb-6">
             <div>
                 <div className="flex items-center gap-2 mb-2">
                     <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                    <span className="font-mono text-xs font-bold uppercase text-gray-500">Active Entities</span>
+                    <span className="font-mono text-xs font-bold uppercase text-gray-500">SWS_ECOSYSTEM_V2.0</span>
                 </div>
                 <h2 className="text-5xl md:text-7xl font-black text-ink uppercase tracking-tighter">
-                  System<br/>
-                  <span className="text-transparent text-outline-ink">Architecture</span>
+                  The<br/>
+                  <span className="text-transparent text-outline-ink">Value Ladder</span>
                 </h2>
             </div>
             <div className="hidden md:flex items-center gap-4">
                 <div className="p-4 bg-brand-blue text-white border-4 border-ink font-mono text-xs font-bold uppercase shadow-brutal rotate-2">
-                    Entity Stack
+                    Full Stack
                 </div>
                 <div className="p-4 bg-gray-100 border-4 border-ink -rotate-1">
                     <Disc size={48} strokeWidth={2} className="animate-spin-slow" />
@@ -65,14 +65,21 @@ const Ventures: React.FC = () => {
                     {/* Card Header */}
                     <div className="flex justify-between items-start mb-6 border-b-4 border-ink pb-6">
                         <div>
-                             <div className={`inline-block px-3 py-1 mb-3 text-white font-mono text-xs font-bold uppercase border-2 border-ink ${
-                                 venture.color === 'brand-blue' ? 'bg-brand-blue' : 
-                                 venture.color === 'suit' ? 'bg-suit' : 
-                                 venture.color === 'found' ? 'bg-found' :
-                                 venture.color === 'browser-os' ? 'bg-browser-os' :
-                                 venture.color === 'accent' ? 'bg-accent' : 'bg-ink'
-                             }`}>
-                                {venture.role}
+                             <div className="flex gap-2 mb-3">
+                                 <div className={`inline-block px-3 py-1 text-white font-mono text-xs font-bold uppercase border-2 border-ink ${
+                                     venture.color === 'brand-blue' ? 'bg-brand-blue' : 
+                                     venture.color === 'suit' ? 'bg-suit' : 
+                                     venture.color === 'found' ? 'bg-found' :
+                                     venture.color === 'browser-os' ? 'bg-browser-os' :
+                                     venture.color === 'accent' ? 'bg-accent' : 'bg-ink'
+                                 }`}>
+                                    {venture.role}
+                                 </div>
+                                 {venture.level && (
+                                    <div className="inline-block px-3 py-1 bg-gray-200 text-ink font-mono text-xs font-bold uppercase border-2 border-ink">
+                                        {venture.level}
+                                    </div>
+                                 )}
                              </div>
                              <h3 className="text-3xl md:text-4xl font-black text-ink uppercase leading-none tracking-tight">
                                 {venture.name}
@@ -105,7 +112,7 @@ const Ventures: React.FC = () => {
                     {/* Features / Content Pillars */}
                     <div className="bg-gray-50 border-2 border-ink p-4 mb-8 flex-grow">
                         <div className="font-mono text-xs font-bold uppercase text-gray-500 mb-3 border-b-2 border-gray-200 pb-2">
-                            System Protocols
+                            Core Modules
                         </div>
                         <ul className="space-y-3">
                             {venture.features.map((feat, i) => (
