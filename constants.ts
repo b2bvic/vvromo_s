@@ -74,6 +74,14 @@ export const TIMELINE_DATA: TimelineEvent[] = [
   },
   {
     year: '2020',
+    title: 'FOUND Agency',
+    location: 'Raleigh, NC',
+    description: 'Co-Founder & COO. Architected agency infrastructure. Drove 2,700% revenue growth (2023-2024) and applied adaptive strategies across 20+ industries.',
+    category: 'mastery',
+    stats: ['2,700% REV GROWTH', '1,400% CLICK LIFT', '20+ INDUSTRIES']
+  },
+  {
+    year: '2020',
     title: 'Growth Consulting',
     location: 'Ideamarket / AFF',
     description: 'Targeted entity optimization and content repurposing for pre-AI organic growth.',
@@ -94,7 +102,7 @@ export const TIMELINE_DATA: TimelineEvent[] = [
     location: 'Scale With Search',
     description: 'Deploying hybrid intelligence systems (Local LLMs + Human in the Loop). Transitioning from SEO to Information Architecture.',
     category: 'mastery',
-    stats: ['1,400% CLICK BOOST', 'AI OPERATING SYSTEMS', 'LOCAL INFERENCE HUBS']
+    stats: ['AI OPERATING SYSTEMS', 'LOCAL INFERENCE HUBS', 'ENTERPRISE MOATS']
   }
 ];
 
@@ -221,9 +229,9 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     period: "2020 - Present",
     location: "Raleigh, NC",
     points: [
-      "Built agency infrastructure focused on Local & Service Based Business owners in the Research Triangle.",
-      "Developed repeatable organic growth systems for brick & mortar entities.",
-      "Scaling service-based revenue through semantic local SEO."
+      "Drove 2,700% increase in annual revenue (2023-2024) by personally securing 90% of new clients.",
+      "Established scalable AI processes which increased high-value keyword clicks by 1,400% within 12 months.",
+      "Applied strategies across 20+ industries (Brick & Mortar, B2B) demonstrating adaptability in volatile markets."
     ]
   },
   {
