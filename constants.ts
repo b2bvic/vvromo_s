@@ -35,6 +35,14 @@ SIGNATURE QUOTE: "You can't bullshit someone from the ghetto. I don't care how C
 
 export const TIMELINE_DATA: TimelineEvent[] = [
   {
+    year: '1999',
+    title: 'System Overclocking',
+    location: 'Inland Empire, CA',
+    description: 'Demonstrated 5th-grade processing capacity in language and logic during Kindergarten initialization. Assigned to tutor 2nd-grade units, establishing early pedagogical feedback loops.',
+    category: 'foundation',
+    stats: ['99TH PERCENTILE', 'PEER TUTORING', 'ADVANCED LITERACY']
+  },
+  {
     year: '2003',
     title: 'Pattern Recognition Origin',
     location: 'Inland Empire, CA',
@@ -42,11 +50,12 @@ export const TIMELINE_DATA: TimelineEvent[] = [
     category: 'foundation'
   },
   {
-    year: '2008',
-    title: 'Rapid Skill Acquisition',
-    location: 'Riverside, CA',
-    description: 'Trombone Pivot. Competence in 3 months, Section Leader in 6. Validated "Immersion Protocol".',
-    category: 'foundation'
+    year: '2008 - 2018',
+    title: 'Acoustic Systems Architecture',
+    location: 'SoCal (LA/SD/IE)',
+    description: 'Ten-year campaign in sonic algorithms. Classically-Trained Trombonist executing performance logistics and pedagogical systems across the Southern California circuit.',
+    category: 'foundation',
+    stats: ['12 ENSEMBLES', '55 STUDENTS', '100+ SHOWS']
   },
   {
     year: '2013',
@@ -276,6 +285,17 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
       "Manual entry into search algorithms and semantic content creation.",
       "Optimized 20+ WP sites and wrote 450k words of content.",
       "Developed foundational knowledge of search engine mechanisms."
+    ]
+  },
+  {
+    role: "Director of Acoustic Systems",
+    company: "Freelance Musician",
+    period: "2008 - 2018",
+    location: "Southern California",
+    points: [
+      "Orchestrated logistics and performance for 100+ shows across LA, San Diego, and Inland Empire.",
+      "Systematized music theory pedagogy for 55+ students (25 children, 15 adults, 15 trombonists).",
+      "Executed 'Immersion Protocol' to self-teach piano architecture while operating as a Classically-Trained Trombonist."
     ]
   }
 ];
