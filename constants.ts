@@ -1,13 +1,12 @@
 
-
-import { TimelineEvent, Principle, ExtendedVenture, SkillData, ExperienceItem } from './types';
+import { TimelineEvent, Principle, ExtendedVenture, SkillData, ExperienceItem, Testimonial, IndustrySector } from './types';
 
 export const FULL_BIO_CONTEXT = `
 # ROMO_S: THE DIGITAL TWIN OF VICTOR VALENTINE ROMO
 Identity: Information Architect, Hybrid Intelligence Specialist, Founder.
 System Status: Online.
 Mission: Structure Information. Scale Intelligence. Moving beyond public information retrieval (SEO) to architect proprietary intelligence (RAG) and autonomous acquisition (AI Agents).
-Core Thesis: The principles used to master Google (the world's biggest AI) are the same principles required to build proprietary AI systems.
+Core Thesis: The principles used to master Google (the world's biggest AI) are the same principles required to architect proprietary AI systems.
 
 KEY NARRATIVE ENTITIES & ARCS:
 1. **The Foundation (1993-2009):** Born in Inland Empire, CA. Developed pattern recognition via survival necessity.
@@ -300,14 +299,6 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   }
 ];
 
-export interface Testimonial {
-  id: string;
-  quote: string;
-  author: string;
-  role: string;
-  context: string;
-}
-
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "REPUTATION_LOG_001",
@@ -378,5 +369,85 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Jeff Putnam",
     role: "Writer, The Converted Catholic",
     context: "PLATFORM_OPTIMIZATION"
+  }
+];
+
+export const INDUSTRIES_DATA: IndustrySector[] = [
+  {
+    id: "SEC_01",
+    sector: "Industrial & Manufacturing",
+    description: "Complex B2B sales cycles, technical specification catalogs, and global supply chain logistics.",
+    clients: [
+      "AAA Test Labs", "Adrian Steel", "Advanced Work Vans", "Ansell Limited", "Baker Industries", 
+      "Clear Packaging", "Cobra Carbide", "Consolidated Machinery Movers", "Crewsafe", "Custom-Bilt Metals", 
+      "Dexter Magnetic", "Duggan Inc", "Edlong", "Elk River", "EMF", "Enervise", "Epotek", "Epoxies Inc", 
+      "Extendobed", "Faztek", "First Choice Packaging", "Forge USA", "Freewave", "Gearheart Industries", 
+      "GPRS", "Integra", "KE2Therm Solutions", "Kerper-Bowron", "Kimball Midwest", "Master Appliance", 
+      "Midwest Bale Ties", "Miller Environmental Group", "MM Manufacturing", "Monti Inc", "MuM Industries", 
+      "NEFM", "New England Cold Storage", "NIA", "OMNI Technologies", "Onyx Specialty Papers", 
+      "Orange Aluminum", "Plastech Fabrication", "Plastech Molding", "Power Electronics", 
+      "Protective Packaging", "Seaman Paper", "SOMIC", "Stop Stick", "Stout Buckets", "SupplyOne", 
+      "Technipaq", "TSL Graphics", "USBid", "Visser Precision", "WB Parts", "Western States Machine"
+    ]
+  },
+  {
+    id: "SEC_02",
+    sector: "Enterprise SaaS & Technology",
+    description: "High-velocity diverse markets requiring distinct competitive moats and authoritative documentation.",
+    clients: [
+      "Accresa", "Agilian", "Amtech", "Ascribe", "Atonix Digital", "Axseter Systems", "Brightskull", "Brij", 
+      "Bureau.id", "Callminer", "Catalyst", "Cloud Carib", "Cloverleaf", "Crux Intelligence", "Data Slide", 
+      "Digital Prism", "Faye Digital", "Firemon", "Green Irony", "Grey Matter", "iReportSource", "JUMO", 
+      "MAD Security", "Nextup", "Pando", "Recurate", "RISCPoint", "RTA Fleet", "Seven Hills Tech", 
+      "Stride", "The UP App", "Trinity Online", "Unbabel", "UX Cabin", "ValidSoft", "VirtuallyIncredible", 
+      "Voyager Labs", "Wondersign", "Zing Hub"
+    ]
+  },
+  {
+    id: "SEC_03",
+    sector: "Healthcare & Life Sciences",
+    description: "YMYL (Your Money Your Life) sensitive sectors requiring absolute semantic accuracy and trust.",
+    clients: [
+      "CarePro Funding", "ClinLab Staffing", "Cryo Body Works", "General Bandage", "Happi Tummi", 
+      "Hydrate Pure", "Ke'ale Chiro HON", "Life Sci KY", "Limitless Chiro", "Providence Enterprise", 
+      "Q Laboratories", "Rubric Bio", "Service Care", "Solace Showers", "SpineDoctor"
+    ]
+  },
+  {
+    id: "SEC_04",
+    sector: "Construction & Skilled Trades",
+    description: "Local dominance and service-area businesses (SABs) requiring geo-spatial optimization.",
+    clients: [
+      "Able1", "Above Roofing", "Blake Interiors", "Concrete Design Services", "Current Home", 
+      "Frazier Architecture", "ICS", "Lux Clean", "Max Roofer ATX", "Pro Choice Contractors", 
+      "Raleigh Janitorial", "REM+ARQ", "Smart Roofs Solar", "Valley Welding", "WOGFC"
+    ]
+  },
+  {
+    id: "SEC_05",
+    sector: "Finance & Professional Services",
+    description: "High-ticket service providers leveraging authority to drive qualified lead generation.",
+    clients: [
+      "2 Fair Market Value", "ADEX Int'l", "Advisicon", "AMZ Atlas", "AO Fund", "ArcherHall", "Astound Group", 
+      "Bold Type", "BoXD", "Brandience", "Bright Balance", "Budget Guard", "CityRanked", "Content That Connects", 
+      "CREF", "Crunch Consult", "Cultivate", "Epipheo", "Express Freight Finance", "First Financial", 
+      "Four Pillars Investors", "ICON Marketing", "J Hensley Consulting", "Josh Lawyer Austin", 
+      "Legal Bill Review", "Lighthouse Global", "NBI", "NC Bail Bonds", "Nolan & Cunnings", "On Display", 
+      "Positivity Project", "Profit Frog", "RJ Young", "Search Team", "Sica Fletcher", "SMG", "Teams & Co", 
+      "Truck Lenders USA", "Vaya Group", "WealthPrime", "Wealthquest", "Wise Investigator", "Young & Associates"
+    ]
+  },
+  {
+    id: "SEC_06",
+    sector: "Consumer, Media & Lifestyle",
+    description: "High-volume B2C entities requiring brand affinity, rapid indexing, and audience capture.",
+    clients: [
+      "712 Vodka", "Abuzari Fragrances", "AlPayPerCrawl", "Backyard Dog Agility", "Boomer Proof AI", 
+      "Budlyft", "Catholic Convert", "Daily Beat", "Entertainment Rewards", "Farewell", "Festivities UC", 
+      "Find-a-Rep", "Fish Lodges", "Heather Habets", "I Love Bicycling", "Lars Mapstead", "Less is Moor", 
+      "Magazine Jukebox", "Mapping My Mind", "Pretty Odd Curiosities", "Reward Builders", "Shroomspy", 
+      "Tattoo Remove Near", "The Riff Company", "Tread Athletics", "Unreal AI", "Whitsons", "WLS Concierge", 
+      "Wolf Fit", "Woven & Friends"
+    ]
   }
 ];

@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Philosophy from './components/Philosophy';
 import Ventures from './components/Ventures';
+import Industries from './components/Industries';
 // ChatInterface preserved in codebase but removed from runtime view
 // import ChatInterface from './components/ChatInterface'; 
 import FinalAction from './components/FinalAction';
@@ -75,6 +76,13 @@ const App: React.FC = () => {
               The Flywheel
             </a>
             <a 
+              href="#industries" 
+              onClick={(e) => handleNavClick(e, 'industries')}
+              className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none cursor-pointer"
+            >
+              Ubiquity
+            </a>
+            <a 
               href="#timeline" 
               onClick={(e) => handleNavClick(e, 'timeline')}
               className="relative px-3 py-2 border-2 border-transparent hover:border-ink hover:bg-highlight hover:text-ink hover:shadow-brutal-sm transition-all active:translate-y-1 active:shadow-none cursor-pointer"
@@ -105,8 +113,8 @@ const App: React.FC = () => {
       <main className="relative z-10 border-x-0 md:border-x-4 border-ink max-w-7xl mx-auto bg-surface shadow-brutal-xl my-0 md:my-12 transition-colors duration-300">
         <Hero />
         
-        {/* Divider Tape */}
-        <div className="w-full h-12 bg-ink flex items-center overflow-hidden select-none">
+        {/* Divider Tape - Fixed for Dark Mode (Always Dark Background for High Contrast Text) */}
+        <div className="w-full h-12 bg-neutral-900 border-y-4 border-ink flex items-center overflow-hidden select-none">
            <div className="whitespace-nowrap font-mono text-highlight font-bold uppercase text-sm animate-marquee">
               /// STRUCTURE INFORMATION /// SCALE INTELLIGENCE /// APPLIED INFORMATION SYSTEMS /// HYBRID INTELLIGENCE ARCHITECTURE /// 
               /// STRUCTURE INFORMATION /// SCALE INTELLIGENCE /// APPLIED INFORMATION SYSTEMS /// HYBRID INTELLIGENCE ARCHITECTURE /// 
@@ -118,6 +126,8 @@ const App: React.FC = () => {
         <Methodology />
 
         <div className="w-full h-4 bg-accent border-y-4 border-ink bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+
+        <Industries />
 
         <Timeline />
         

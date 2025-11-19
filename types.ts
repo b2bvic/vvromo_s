@@ -49,3 +49,18 @@ export interface ExtendedVenture extends Venture {
   level?: string;
   isComingSoon?: boolean;
 }
+
+export interface Testimonial {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+  context: string;
+}
+
+export interface IndustrySector {
+  id: string;
+  sector: string;
+  description: string;
+  clients: string[];
+}
